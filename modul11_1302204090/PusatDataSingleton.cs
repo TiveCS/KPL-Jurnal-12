@@ -8,6 +8,7 @@ namespace modul11_1302204090
 {
 	internal class PusatDataSingleton
 	{
+		// Mengembalikan instance class ini
 		public static PusatDataSingleton GetDataSingleton()
 		{
 			if (_instance == null)
@@ -17,6 +18,7 @@ namespace modul11_1302204090
 			return _instance;
 		}
 
+		// Menyimpan instance dari class ini
 		private static PusatDataSingleton? _instance { get; set; }
 
 		public List<string> DataTersimpan { get; set; }
@@ -27,16 +29,19 @@ namespace modul11_1302204090
 			DataTersimpan = new List<string>();
 		}
 
+		// Menambahkan sebuah objek string ke DataTersimpan
 		public void AddSebuahData(string input)
 		{
 			DataTersimpan.Add(input);
 		}
 
+		// Menghapus objek dari DataTersimpan menggunakan index dari objek tersebut
 		public void HapusSebuahData(int index)
 		{
 			DataTersimpan.RemoveAt(index);
 		}
 
+		// Menampilkan semua data dari DataTersimpan
 		public void PrintSemuaData()
 		{
 			Console.WriteLine(" ");
@@ -46,6 +51,7 @@ namespace modul11_1302204090
 			}
 		}
 
+		// Mengembalikan instance dari list DataTersimpan
 		public List<string> GetSemuaData()
 		{
 			return DataTersimpan;
