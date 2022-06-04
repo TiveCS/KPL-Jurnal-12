@@ -21,7 +21,7 @@ namespace modul11_1302204090
 		// Menyimpan instance dari class ini
 		private static PusatDataSingleton? s_instance { get; set; }
 
-		public List<string> DataTersimpan { get; set; }
+		public List<string> DataTersimpan { get; init; }
 
 		// Konstruktor private agar instance class hanya sekali dibuat
 		private PusatDataSingleton()
