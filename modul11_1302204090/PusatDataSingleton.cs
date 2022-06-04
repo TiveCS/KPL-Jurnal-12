@@ -11,15 +11,15 @@ namespace modul11_1302204090
 		// Mengembalikan instance class ini
 		public static PusatDataSingleton GetDataSingleton()
 		{
-			if (_instance == null)
+			if (s_instance == null)
 			{
-				_instance = new PusatDataSingleton();
+				s_instance = new PusatDataSingleton();
 			}
-			return _instance;
+			return s_instance;
 		}
 
 		// Menyimpan instance dari class ini
-		private static PusatDataSingleton? _instance { get; set; }
+		private static PusatDataSingleton? s_instance { get; set; }
 
 		public List<string> DataTersimpan { get; set; }
 
